@@ -1,0 +1,200 @@
+//font-size
+@textInFontSize: 16px;
+@textInFontSizeTable: 16px;
+@textInFontSizeMobile: 15px;
+//line-height
+@textInLineHeight: 24px;
+@textInLineHeightTable: 24px;
+@textInLineHeightMobile: 23px;
+//marginTop
+@textInMargin: 10px;
+@textInMarginTable: 10px;
+@textInMarginMobile: 7px;
+//color
+@textInColor: inherit;
+
+img {
+    max-width: 100%;
+}
+
+.text-in {
+    //common
+    color: @color4;
+    font-size: @textInFontSize;
+    line-height: @textInLineHeight;
+    font-weight: normal;
+    @media @tb {
+        font-size: @textInFontSizeTable;
+        line-height: @textInLineHeightTable;
+    }
+    @media @mb {
+        font-size: @textInFontSizeMobile;
+        line-height: @textInLineHeightMobile;
+    }
+
+    * {
+        font-size: inherit;
+        line-height: inherit;
+    }
+
+    h1,h2,h3,h4,h5,h6,p,ul,ol,img,pre,.gallery,.post-masonry-gallery {
+        .typographyMargins(@textInMargin, @textInMarginTable, @textInMarginMobile);
+        &:last-child {
+            margin-bottom: 0!important;
+        }
+    }
+
+    //text tags styles
+    h1,h2,h3,h4,h5,h6 {
+        color: @color3;
+        font-weight: 700;
+    }
+    h1 {
+        .typographyHeadersSizes(32px, 40px, 30px, 38px, 25px, 34px, 24px, 32px);
+    }
+    h2 {
+        .typographyHeadersSizes(28px, 36px, 27px, 35px, 26px, 32px, 24px, 30px);
+    }
+    h3 {
+        .typographyHeadersSizes(27px, 35px, 26px, 34px, 24px, 32px, 22px, 30px);
+    }
+    h4 {
+        .typographyHeadersSizes(26px, 34px, 24px, 32px, 22px, 30px, 20px, 28px);
+    }
+    h5 {
+        .typographyHeadersSizes(25px, 33px, 24px, 32px, 21px, 29px, 19px, 27px);
+    }
+    h6 {
+        .typographyHeadersSizes(18px, 26px, 18px, 26px, 17px, 25px, 17px, 25px);
+    }
+
+    strong, b {
+        font-weight: 700;
+        color: @color3;
+    }
+    i:not(.fa), em {
+        font-style: italic;
+    }
+    i.fa {
+        color: @color1;
+    }
+
+    a {
+        text-decoration: underline;
+        color: @color1;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    blockquote {
+        background: @color1;
+        border-bottom: 3px solid @color1;
+        padding: 15px;
+        border-radius: 5px;
+        font-style: italic;
+    }
+
+    ul,
+    ol {
+        padding: 0 0 0 17px;
+        @media @nbtb {
+            padding: 0 0 0 10px;
+        }
+        @media @mb {
+            padding: 0;
+        }
+        li {
+            list-style-position: outside;
+            & + li {
+                margin-top: 1px;
+                @media @tbmb {
+                    margin-top: 1px;
+                }
+            }
+            ul {
+                margin-top: 15px;
+            }
+        }
+    }
+
+    ul {
+        li {
+            list-style: none;
+            list-style-position: inside;
+            position: relative;
+            padding-left: 18px;
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0.5em;
+            }
+            &:before {
+                width: 10px;
+                height: 10px;
+                border-radius: 1px;
+                background-color: @color1;
+                @media @tbmb {
+                    width: 8px;
+                    height: 8px;
+                }
+            }
+            &:after {
+                width: 5px;
+                height: 5px;
+                border-radius: 1px;
+                background-color: @color4;
+                @media @tbmb {
+                    width: 4px;
+                    height: 4px;
+                }
+            }
+        }
+    }
+
+    ol {
+        li {
+            list-style: decimal;
+        }
+    }
+
+    table {
+        border: 0;
+        width: 100%!important;
+        tr {
+            border: 0;
+            width: 100%!important;
+            background: #ccc;
+            &:nth-child(2n) {
+                background: #fff;
+            }
+            th,
+            td {
+                border: 0;
+                text-align: left;
+                padding: 5px;
+                &+td,
+                &+th {
+                    border-left: 3px solid #fff;
+                }
+            }
+            th {
+                font-weight: 700;
+                padding: 10px;
+            }
+        }
+    }
+
+    pre {
+        display: block;
+        padding: 15px;
+        border-radius: 5px;
+        overflow: auto;
+        white-space: pre;
+        font-weight: normal;
+        background: @color1;
+        border: 1px solid @color1;
+    }
+}

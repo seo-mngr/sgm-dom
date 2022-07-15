@@ -1,0 +1,36 @@
+{
+    "iconWidth" : 70,
+    "iconHeight" : 95,
+    "items" : [
+        {
+            "icon" : "images/single-service/objects-map/map-marker-1.png",
+            "image" : "images/single-service/objects-map/map-marker-1-content-image.jpg",
+            "lat" : 55.770408985737276452709920704364776611328125,
+            "lng" : 37.64787115707778042406062013469636440277099609375,
+            "title" : "Дом 6*8 Сосново",
+            "desc" : "Виниловый сайдинг",
+            "price" : "78 000 руб.",
+            "url" : "#"
+        },
+        {
+            "icon" : "images/single-service/objects-map/map-marker-2.png",
+            "image" : "images/single-service/objects-map/map-marker-2-content-image.jpg",
+            "lat" : 55.68322122479940361472472432069480419158935546875,
+            "lng" : 37.6483569662703843050621799193322658538818359375,
+            "title" : "Дом 7*4 Ёлкино",
+            "desc" : "Акриловый сайдинг",
+            "price" : "57 300 руб.",
+            "url" : "#"
+        },
+        {
+            "icon" : "images/single-service/objects-map/map-marker-3.png",
+            "image" : "images/single-service/objects-map/map-marker-3-content-image.jpg",
+            "lat" : 55.75322122479940361472472432069480419158935546875,
+            "lng" : 37.8483569662703843050621799193322658538818359375,
+            "title" : "Дом 12*3 Дубино",
+            "desc" : "Снежный сайдинг",
+            "price" : "105 200 руб.",
+            "url" : "#"
+        }
+    ]
+}

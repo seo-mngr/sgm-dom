@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Стрелка вверх Copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Popup/dop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Popup" transform="translate(-1310.000000, -1654.000000)">
+            <g id="Стрелка-вверх-Copy" transform="translate(1210.000000, 1654.000000)">
+                <g transform="translate(100.000000, 0.000000)">
+                    <rect id="Rectangle-9" fill="#FFCC01" fill-rule="nonzero" x="0" y="0" width="80" height="80" rx="2"></rect>
+                    <polygon id="Triangle-Copy-3" fill="#36435F" transform="translate(40.500000, 40.000000) rotate(-180.000000) translate(-40.500000, -40.000000) " points="40.5 46 33 34 40.528735 39 48 34"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

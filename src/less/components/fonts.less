@@ -1,0 +1,111 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Panton';
+    src: url('../fonts/panton/Panton-Regular.eot');
+    src: local('Panton Regular'), local('Panton-Regular'),
+        url('../fonts/panton/Panton-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/panton/Panton-Regular.woff') format('woff'),
+        url('../fonts/panton/Panton-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Panton';
+    src: url('../fonts/panton/Panton-RegularItalic.eot');
+    src: local('Panton Regular Italic'), local('Panton-RegularItalic'),
+        url('../fonts/panton/Panton-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/panton/Panton-RegularItalic.woff') format('woff'),
+        url('../fonts/panton/Panton-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Panton';
+    src: url('../fonts/panton/Panton-SemiBold.eot');
+    src: local('Panton SemiBold'), local('Panton-SemiBold'),
+        url('../fonts/panton/Panton-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/panton/Panton-SemiBold.woff') format('woff'),
+        url('../fonts/panton/Panton-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Panton';
+    src: url('../fonts/panton/Panton-SemiBoldItalic.eot');
+    src: local('Panton SemiBold Italic'), local('Panton-SemiBoldItalic'),
+        url('../fonts/panton/Panton-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/panton/Panton-SemiBoldItalic.woff') format('woff'),
+        url('../fonts/panton/Panton-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Panton';
+    src: url('../fonts/panton/Panton-Bold.eot');
+    src: local('Panton Bold'), local('Panton-Bold'),
+        url('../fonts/panton/Panton-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/panton/Panton-Bold.woff') format('woff'),
+        url('../fonts/panton/Panton-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-display: swap;
+	font-family: 'Tinos';
+	src: url('../fonts/tinos/Tinos.eot');
+	src: local('Tinos'),
+		url('../fonts/tinos/Tinos.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/tinos/Tinos.woff') format('woff'),
+		url('../fonts/tinos/Tinos.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-display: swap;
+	font-family: 'Tinos';
+	src: url('../fonts/tinos/Tinos-Bold.eot');
+	src: local('Tinos Bold'), local('Tinos-Bold'),
+		url('../fonts/tinos/Tinos-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/tinos/Tinos-Bold.woff') format('woff'),
+		url('../fonts/tinos/Tinos-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-display: swap;
+	font-family: 'Tinos';
+	src: url('../fonts/tinos/Tinos-BoldItalic.eot');
+	src: local('Tinos Bold Italic'), local('Tinos-BoldItalic'),
+		url('../fonts/tinos/Tinos-BoldItalic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/tinos/Tinos-BoldItalic.woff') format('woff'),
+		url('../fonts/tinos/Tinos-BoldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+    text-rendering: optimizeLegibility;
+}
+
+.ff(@type: Panton) when (@type =Panton) {
+    font-family: 'Panton', sans-serif;
+}
+
+.ff(@type: Tinos) when (@type =Tinos) {
+    font-family: 'Tinos', serif;
+}

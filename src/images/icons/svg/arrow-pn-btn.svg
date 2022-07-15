@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="13px" viewBox="0 0 8 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Листалки" transform="translate(-72.000000, -9.000000)" fill="#80909D">
+            <g id="Group-18">
+                <g id="Стрелка-вверх-Copy-2" transform="translate(77.000000, 15.000000) scale(-1, 1) translate(-77.000000, -15.000000) translate(62.000000, 0.000000)">
+                    <path d="M21.8772187,12.1240441 C21.7118266,11.958652 21.4430645,11.958652 21.2776724,12.1240441 L16.0057999,17.4062536 L10.7235903,12.1240441 C10.5581983,11.958652 10.2894361,11.958652 10.1240441,12.1240441 C9.95865198,12.2894361 9.95865198,12.5581983 10.1240441,12.7235903 L15.6956897,18.295236 C15.7783858,18.3779321 15.8817558,18.4192801 15.9954629,18.4192801 C16.0988329,18.4192801 16.21254,18.3779321 16.295236,18.295236 L21.8668817,12.7235903 C22.0426108,12.5581983 22.0426108,12.2894361 21.8772187,12.1240441 Z" id="Path" transform="translate(16.000000, 15.209640) rotate(-90.000000) translate(-16.000000, -15.209640) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

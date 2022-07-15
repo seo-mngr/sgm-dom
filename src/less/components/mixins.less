@@ -1,0 +1,118 @@
+//pc
+@pc: ~"(min-width: 1200px)";
+//pcMax
+@pcMax: ~"(max-width: 1200px)";
+//notebook
+@nb: ~"(min-width: 992px) and (max-width: 1199px)";
+//tablet
+@tb: ~"(min-width: 768px) and (max-width: 991px)";
+//mobile
+@mb: ~"(min-width: 0px) and (max-width: 767px)";
+//mobile
+@mb2: ~"(min-width: 0px) and (max-width: 360px)";
+//mobile
+@mb3: ~"(min-width: 0px) and (max-width: 350px)";
+//full
+@full: ~"(min-width: 768px)";
+//full2
+@full2: ~"(min-width: 992px)";
+//tablet + mobile
+@tbmb: ~"only screen and (min-width: 0px) and (max-width: 991px)";
+//notebook + tablet
+@nbtb: ~"only screen and (min-width: 768px) and (max-width: 1199px)";
+//notebook + tablet + mobile
+@nbtbmb: ~"only screen and (min-width: 0px) and (max-width: 1199px)";
+
+//placeholder color
+.placeholder(@rules) {
+    &::-webkit-input-placeholder {
+        @rules();
+    }
+    &:-moz-placeholder {
+        @rules();
+    }
+    &::-moz-placeholder {
+        @rules();
+    }
+    &:-ms-input-placeholder {
+        @rules();
+    }
+}
+
+.customScrollbar (@color: rgba(0, 0, 0, 0.2), @width: 5px, @height: 5px, @radius: 4px) {
+    overflow: auto;
+    &::-webkit-scrollbar {
+        width: @width;
+        height: @height;
+    }
+    &::-webkit-scrollbar-button:start:decrement,
+    &::-webkit-scrollbar-button:end:increment {
+        display: block;
+        height: 0;
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-track-piece {
+        border-radius: 0;
+        border-bottom-right-radius: @radius;
+        border-bottom-left-radius: @radius;
+    }
+    &::-webkit-scrollbar-thumb:vertical {
+        height: 50px;
+        background-color: @color;
+        border-radius: @radius;
+    }
+    &::-webkit-scrollbar-thumb:horizontal {
+        width: 50px;
+        background-color: @color;
+        border-radius: @radius;
+    }
+}
+
+.clearfix {
+    zoom: 1;
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.typographyMargins(@mPc, @mTb, @mMb) {
+    margin-bottom: @mPc;
+    @media @tb {
+        margin-bottom: @mTb;
+    }
+    @media @mb {
+        margin-bottom: @mMb;
+    }
+}
+
+.typographyHeadersSizes(@fsPc, @lhPc, @fsNb, @lhNb, @fsTb, @lhTb, @fsMb, @lhMb) {
+    font-size: @fsPc;
+    line-height: @lhPc;
+    @media @nb {
+        font-size: @fsNb;
+        line-height: @lhNb;
+    }
+    @media @tb {
+        font-size: @fsTb;
+        line-height: @lhTb;
+    }
+    @media @mb {
+        font-size: @fsMb;
+        line-height: @lhMb;
+    }
+}
+
+.inline-svg-code(@code) {
+    @-svg-code: escape(~'<?xml version="1.0" ?>@{code}');
+    @-inline-svg-code: ~'data:image/svg+xml,@{-svg-code}';
+    @-inline-svg-url: ~"url('@{-inline-svg-code}')";
+}
+
+.itemWidth(@itemsInRow, @margin) {
+    width: calc(~"(100% / @{itemsInRow}) - ((@{margin} * (@{itemsInRow} - 1)) / @{itemsInRow})");
+}
