@@ -113,7 +113,7 @@ gulp.task('html', function () {
 gulp.task('less', function () {
     return gulp.src(path.src.css)
     .pipe(less())
-    .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
+    .pipe(autoprefixer(['last 23 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
     .pipe(cleanCSS())
     .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest(path.dist.css))
