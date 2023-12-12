@@ -2,7 +2,7 @@ $(document).ready(function () {
     'use strict';
 
     var file = $('body').data('theme-name')+'/images/svg-sprites.svg';
-    var revision = 1657739208452;
+    var revision = 1702384213178;
 
     if(!document.createElementNS || !document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect)
         return true;
