@@ -7,3 +7,4 @@ wp-theme/
 *.sublime-project
 *.sublime-workspace
 info.txt
+.idea/
