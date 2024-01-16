@@ -3492,6 +3492,13 @@ body.page-template-page-tmp-service {
                         width: 220px;
                     }
                 }
+                &.gallery-images-items-column-width-3 {
+                    margin-left: 36px;
+                    width: 255px;
+                    @media @tbmb {
+                        width: 255px;
+                    }
+                }
             }
             .gallery-images-item {
                 .animate;
@@ -3528,6 +3535,9 @@ body.page-template-page-tmp-service {
                     @media @tbmb {
                         height: calc(~'150px - (@{galleryImagesMargin} / 2)');
                     }
+                }
+                &.gallery-images-item-height-auto {
+                    height: auto;
                 }
                 picture {
                     display: block;
@@ -5867,6 +5877,99 @@ body.page-template-page-tmp-service {
                     }
                 }
             }
+        }
+    }
+}
+
+.product-card {
+    width: 255px;
+
+    * {
+        text-decoration: none;
+    }
+
+    &__img {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 220px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain !important;
+        }
+    }
+
+    &__info {
+
+    }
+
+    &__cost {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: flex-end;
+
+        div {
+            margin-right: 9px;
+        }
+    }
+
+    &__cost-new {
+        font-size: 20px;
+        font-weight: 900;
+        color: #f81155;
+    }
+
+    &__cost-old {
+        font-size: 14px;
+        font-weight: bold;
+        color: #99a3ae;
+        text-decoration: line-through;
+    }
+
+    &__cost-discount {
+        font-size: 14px;
+        font-weight: bold;
+        color: #f81155;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #000000;
+        span {
+            line-height: 120%;
+        }
+    }
+
+    &__controls {
+        margin-top: 20px;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 47px;
+        background: #ffcc01;
+        font-size: 18px;
+        font-weight: 600;
+        color: #000000;
+
+        &:hover {
+            background: #dcb000;
+        }
+
+        span {
+            margin-right: 8px;
+        }
+
+        svg {
+            position: relative;
+            top: 1px;
+            width: 16px;
+            height: 8px;
         }
     }
 }
