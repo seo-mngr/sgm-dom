@@ -1,0 +1,135 @@
+.header {
+    height: 81px;
+
+    &__container {
+        padding: 0 40px;
+        height: 100%;
+    }
+
+    &__logo {
+
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+.header-menu {
+    @media @nbtbmb {
+        display: none;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        padding: 0 20px;
+        color: #000;
+        text-decoration: none;
+    }
+}
+
+.logo {
+
+}
+
+.download-btn {
+    display: flex;
+    padding: 16px 28px;
+    background-color: #25d366;
+    border-radius: 30px;
+    border: 1px solid #000;
+    font-weight: 600;
+    cursor: pointer;
+
+    @media @nbtbmb {
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__text {
+        @media @nbtbmb {
+            display: none;
+        }
+    }
+
+    &__icon {
+        margin-left: 7px;
+
+        @media @nbtbmb {
+            margin: 0;
+        }
+    }
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    flex-basis: 100%;
+}
+
+.footer {
+    padding-top: 96px;
+    padding-bottom: 88px;
+    background-color: #111b21;
+
+    &__content {
+        display: flex;
+
+        @media @nbtbmb {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__col {
+        flex: 1 0 auto;
+
+        @media @nbtbmb {
+            width: 50%;
+        }
+
+        &:nth-child(1) {
+            @media @nbtbmb {
+                width: 100%;
+            }
+        }
+    }
+
+    &__logo {
+        fill: #fff;
+    }
+
+    &__menu {
+        color: #fff;
+    }
+
+    &__menu-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__menu-title {
+        padding-bottom: 32px;
+        font-size: 12px;
+    }
+
+    &__menu-item {
+        margin-bottom: 16px;
+        color: #fff;
+        font-size: 18px;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -156,6 +156,39 @@ $(document).ready(function () {
         //clearTimeout(timer);
         $(this).addClass('mobile-touched');
     });
+
+    $('.product-card').on('mouseenter', function(e) {
+        const card_height = $(this).outerHeight();
+        console.log(card_height);
+
+        $(this).css('height', card_height+'px')
+            .toggleClass('hover-active');
+    });
+
+    $('.product-card').on('mouseleave', function(e) {
+        $(this).css('height', 'auto')
+            .toggleClass('hover-active');
+    });
+
+    $(function(){
+        if ( $(window).width() <= 640 ) {
+            const $containers = $('.js-foldable');
+            $containers.each(function (i, container) {
+                const $container = $(container);
+                if ( ! $container.hasClass('js-foldable_unfolded') ) {
+                    const $unfold_btn = $('<div>', {
+                        class: 'js-foldable__unfold-btn',
+                        text: '↓ Раскрыть ↓',
+                    });
+                    $container.append($unfold_btn);
+                    $container.on('click', '.js-foldable__unfold-btn', function(e) {
+                        $container.addClass('js-foldable_unfolded');
+                        $(e.target).remove();
+                    });
+                }
+            });
+        }
+    });
 });
 
 $(window).scroll(function () {

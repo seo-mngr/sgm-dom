@@ -259,6 +259,36 @@ select {
             min-height: 40px;
         }
     }
+    &.styled-btn-size4 {
+        position: relative;
+        min-height: 50px;
+        min-width: 200px;
+        width: 100%;
+        &:before {
+            display: block;
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            width: calc(100% + 20px);
+            height: calc(100% + 20px);
+            opacity: 0;
+        }
+        &:hover {
+
+        }
+        @media @nb {
+            min-height: 48px;
+        }
+        @media @tb {
+            min-height: 46px;
+        }
+        @media @mb {
+            font-size: 15px;
+            line-height: 15px;
+            min-height: 40px;
+        }
+    }
     &.styled-btn-without-shadow {
         box-shadow: none!important;
     }
@@ -563,7 +593,7 @@ select {
         font-weight: 500;
     }
     &.semibold {
-        font-weight: 600;
+        font-weight: 700;
     }
     &.bold,
     strong,
@@ -2032,5 +2062,95 @@ iframe.youtube-video-iframe {
         display: block;
         font-weight: 600;
         margin-top: 3px;
+    }
+}
+
+.marquiz-pops {
+    bottom: 5px !important;
+}
+
+.b24-widget-button-position-bottom-right {
+    bottom: 15px !important;
+}
+
+.site-contacts-messenger {
+    &__line {
+        display: flex;
+        align-items: center;
+        color: #232c3f;
+        font-size: 15px;
+        text-decoration: none;
+    }
+
+    &__icon {
+        margin-right: 10px;
+        width: 34px;
+        height: 34px;
+
+        @media @tbmb {
+            width: 26px;
+            height: 26px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+    &__text {
+        padding-bottom: 2px;
+        border-bottom: 1px solid #232c3f;
+
+        @media @tbmb {
+            margin-bottom: 3px;
+        }
+    }
+}
+
+.subway-station {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    font-size: 15px;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        margin-right: 5px;
+        width: 30px;
+        height: 15px;
+        background-color: #da2128;
+        color: #fff;
+
+        &_green {
+            background-color: #48b85e;
+        }
+    }
+
+    &__icon {
+        margin-right: 3px;
+        height: 11px;
+        width: 11px;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__logo-text {
+        position: relative;
+        top: 1px;
+        font-size: 13px;
+    }
+
+    &__text {
+
     }
 }

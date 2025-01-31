@@ -1,0 +1,144 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    .ff(Helvetica-Neue);
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    color: @color3;
+    background: @color2;
+    display: flex;
+    flex-direction: column;
+    font-weight: normal;
+}
+
+html {
+
+}
+
+#main-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+}
+
+.container {
+    max-width: @containerWidth;
+    padding: 0px 10px 0px 10px;
+    .clearfix;
+    display: block;
+    margin: auto;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+textarea,
+select {
+    box-shadow: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+.hidden-on-mobile {
+    @media @mb {
+        display: none!important;
+    }
+}
+
+.show-on-mobile {
+    display: none!important;
+    @media @mb {
+        display: block!important;
+    }
+}
+
+.lead-form {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    width: 100%;
+
+    &__form {
+        padding: 30px;
+        max-width: 360px;
+        border: 1px solid #eee;
+        border-radius: 25px;
+    }
+
+    &__title {
+        margin-bottom: 24px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    &__control {
+        position: relative;
+        margin-bottom: 16px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__label {
+        &_input {
+            display: block;
+            padding: 0 5px;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            color: #bbb;
+            background-color: #fff;
+            transform: translate(0, -50%);
+
+            &.active {
+                top: -7px;
+                font-size: 14px;
+                transform: none;
+            }
+        }
+    }
+
+    &__input {
+        padding: 0 15px;
+        height: 50px;
+        width: 100%;
+        border: 1px solid #ddd;
+        outline: none;
+        border-radius: 25px !important;
+
+        &:focus {
+            border-color: #bbb;
+        }
+    }
+
+    &__button {
+        height: 50px;
+        width: 100%;
+        border: none;
+        border-radius: 25px !important;
+        background-color: #25d366;
+        color: #fff;
+        font-weight: 700;
+        cursor: pointer;
+
+        &_telegram {
+            background-color: #1c93e3;
+        }
+    }
+}

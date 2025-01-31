@@ -1,0 +1,313 @@
+<div class="calc block-padding">
+    <div class="container">
+        <div class="in">
+            <div class="left">
+                <div class="b-title ff-tinos bold no-margin"><div class="b-title-texture b-title-texture-absolute"></div><span>Во сколько обойдется отделка фасада Вашего дома?</span></div>
+                <div class="b-title bt36 color1 ff-tinos bold no-margin">Рассчитайте прямо сейчас</div>
+                <div class="b-title bt24 color4 no-margin">Подробную смету мы подготовим после замеров, но примерный бюджет Вы можете узнать за 40 секунд
+                    <svg>
+                        <use xlink:href="#icon-arrow-right-calc"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="right">
+                <div class="calc-form">
+                    <form class="form-style">
+                        <div class="steps-wrapper">
+                            <div class="step active">
+                                <div class="calc-f-items">
+                                    <div class="calc-f-item calc-f-item-align-center">
+                                        <div class="calc-f-item-title b-title bt16 semibold">Площадь дома:</div>
+                                        <div class="calc-f-item-value">
+                                            <input type="text" name="area" value="120" placeholder="120" style="width:108px;"/>
+                                            <div class="b-title bt16 color4">м²</div>
+                                        </div>
+                                    </div>
+                                    <div class="calc-f-item calc-f-item-align-center">
+                                        <div class="calc-f-item-title b-title bt16 semibold">Линейный размер дома <br />(например, 6х8):</div>
+                                        <div class="calc-f-item-value">
+                                            <input type="text" name="linear-size-x" placeholder="6" style="width:40px;text-align:center;"/>
+                                            <div class="b-title bt16 color4">х</div>
+                                            <input type="text" name="linear-size-y" placeholder="8" style="width:40px;text-align:center;"/>
+                                            <div class="b-title bt16 color4">м</div>
+                                        </div>
+                                    </div>
+                                    <div class="calc-f-item calc-f-item-bg">
+                                        <div class="calc-f-item-title b-title bt16 semibold">Стены дома <br />(материал):</div>
+                                        <div class="calc-f-item-value">
+                                            <div class="radio-checkbox-wrapper">
+                                                <label class="styled-radio">
+                                                    <input type="radio" name="material" value="Газобетон" checked/>
+                                                    <span class="icon"></span>
+                                                    <span class="b-title bt16">Газобетон</span>
+                                                </label>
+                                                <label class="styled-radio">
+                                                    <input type="radio" name="material" value="Блоки"/>
+                                                    <span class="icon"></span>
+                                                    <span class="b-title bt16">Блоки</span>
+                                                </label>
+                                                <label class="styled-radio">
+                                                    <input type="radio" name="material" value="Кирпич"/>
+                                                    <span class="icon"></span>
+                                                    <span class="b-title bt16">Кирпич</span>
+                                                </label>
+                                                <label class="styled-radio">
+                                                    <input type="radio" name="material" value="Бетон"/>
+                                                    <span class="icon"></span>
+                                                    <span class="b-title bt16">Бетон</span>
+                                                </label>
+                                                <label class="styled-radio">
+                                                    <input type="radio" name="material" value="Каркас"/>
+                                                    <span class="icon"></span>
+                                                    <span class="b-title bt16">Каркас</span>
+                                                </label>
+                                                <label class="styled-radio">
+                                                    <input type="radio" name="material" value="Брус"/>
+                                                    <span class="icon"></span>
+                                                    <span class="b-title bt16">Брус</span>
+                                                </label>
+                                                <label class="styled-radio">
+                                                    <input type="radio" name="material" value="Другое"/>
+                                                    <span class="icon"></span>
+                                                    <span class="b-title bt16">Другое</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calc-f-item">
+                                        <div class="calc-f-item-title b-title bt16 semibold">Материал отделки фасада:</div>
+                                        <div class="calc-f-item-value">
+                                            <div class="radio-checkbox-wrapper radio-checkbox-wrapper-items2">
+                                                <label class="styled-checkbox">
+                                                    <input type="checkbox" name="facade-finish-material[]" value="Виниловый сайдинг" checked/>
+                                                    <span class="icon">
+                                                        <svg>
+                                                            <use xlink:href="#icon-checkbox-check"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="info tooltip" title="Небольшая всплывающая <br />подсказка">
+                                                        <svg class="icon-info">
+                                                            <use xlink:href="#icon-info"/>
+                                                        </svg>
+                                                        <svg class="icon-close">
+                                                            <use xlink:href="#icon-close-features"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="b-title bt16">Виниловый сайдинг</span>
+                                                </label>
+                                                <label class="styled-checkbox">
+                                                    <input type="checkbox" name="facade-finish-material[]" value="Мокрый фасад"/>
+                                                    <span class="icon">
+                                                        <svg>
+                                                            <use xlink:href="#icon-checkbox-check"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="info tooltip" title="Небольшая всплывающая <br />подсказка">
+                                                        <svg class="icon-info">
+                                                            <use xlink:href="#icon-info"/>
+                                                        </svg>
+                                                        <svg class="icon-close">
+                                                            <use xlink:href="#icon-close-features"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="b-title bt16">Мокрый фасад</span>
+                                                </label>
+                                                <label class="styled-checkbox">
+                                                    <input type="checkbox" name="facade-finish-material[]" value="Металлический сайдинг"/>
+                                                    <span class="icon">
+                                                        <svg>
+                                                            <use xlink:href="#icon-checkbox-check"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="info tooltip" title="Небольшая всплывающая <br />подсказка">
+                                                        <svg class="icon-info">
+                                                            <use xlink:href="#icon-info"/>
+                                                        </svg>
+                                                        <svg class="icon-close">
+                                                            <use xlink:href="#icon-close-features"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="b-title bt16">Металлический сайдинг</span>
+                                                </label>
+                                                <label class="styled-checkbox">
+                                                    <input type="checkbox" name="facade-finish-material[]" value="Фиброцементный сайдинг"/>
+                                                    <span class="icon">
+                                                        <svg>
+                                                            <use xlink:href="#icon-checkbox-check"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="info tooltip" title="Небольшая всплывающая <br />подсказка">
+                                                        <svg class="icon-info">
+                                                            <use xlink:href="#icon-info"/>
+                                                        </svg>
+                                                        <svg class="icon-close">
+                                                            <use xlink:href="#icon-close-features"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="b-title bt16">Фиброцементный сайдинг</span>
+                                                </label>
+                                                <label class="styled-checkbox">
+                                                    <input type="checkbox" name="facade-finish-material[]" value="Фасадные панели"/>
+                                                    <span class="icon">
+                                                        <svg>
+                                                            <use xlink:href="#icon-checkbox-check"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="info tooltip" title="Небольшая всплывающая <br />подсказка">
+                                                        <svg class="icon-info">
+                                                            <use xlink:href="#icon-info"/>
+                                                        </svg>
+                                                        <svg class="icon-close">
+                                                            <use xlink:href="#icon-close-features"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="b-title bt16">Фасадные панели</span>
+                                                </label>
+                                                <label class="styled-checkbox">
+                                                    <input type="checkbox" name="facade-finish-material[]" value="Деревянный блок-хаус"/>
+                                                    <span class="icon">
+                                                        <svg>
+                                                            <use xlink:href="#icon-checkbox-check"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="info tooltip" title="Небольшая всплывающая <br />подсказка">
+                                                        <svg class="icon-info">
+                                                            <use xlink:href="#icon-info"/>
+                                                        </svg>
+                                                        <svg class="icon-close">
+                                                            <use xlink:href="#icon-close-features"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="b-title bt16">Деревянный блок-хаус</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-f-item calc-f-item-submit">
+                                    <a class="styled-btn styled-btn-1 styled-btn-size2 styled-btn-without-shadow next-step-btn">
+                                        Далее
+                                        <svg class="arrow-right">
+                                            <use xlink:href="#icon-arrow-right"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="calc-f-items">
+                                    <div class="calc-f-item">
+                                        <div class="calc-f-item-title b-title bt16 semibold">Дополнительно понадобится:</div>
+                                        <div class="calc-f-item-value">
+                                            <div class="radio-checkbox-wrapper radio-checkbox-wrapper-items1">
+                                                <label class="styled-checkbox">
+                                                    <input type="checkbox" name="additionally[]" value="Отделка цоколя" checked/>
+                                                    <span class="icon">
+                                                        <svg>
+                                                            <use xlink:href="#icon-checkbox-check"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="info tooltip" title="Небольшая всплывающая <br />подсказка">
+                                                        <svg class="icon-info">
+                                                            <use xlink:href="#icon-info"/>
+                                                        </svg>
+                                                        <svg class="icon-close">
+                                                            <use xlink:href="#icon-close-features"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="b-title bt16">Отделка цоколя</span>
+                                                </label>
+                                                <label class="styled-checkbox">
+                                                    <input type="checkbox" name="additionally[]" value="Установка водосточной системы"/>
+                                                    <span class="icon">
+                                                        <svg>
+                                                            <use xlink:href="#icon-checkbox-check"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="info tooltip" title="Небольшая всплывающая <br />подсказка">
+                                                        <svg class="icon-info">
+                                                            <use xlink:href="#icon-info"/>
+                                                        </svg>
+                                                        <svg class="icon-close">
+                                                            <use xlink:href="#icon-close-features"/>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="b-title bt16">Установка водосточной системы</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calc-f-item calc-f-item-bg">
+                                        <div class="calc-f-item-title b-title bt16 semibold">Понадобится <br />утепление?</div>
+                                        <div class="calc-f-item-value">
+                                            <div class="radio-checkbox-wrapper radio-checkbox-wrapper-items4">
+                                                <label class="styled-radio">
+                                                    <input type="radio" name="warming" value="Нет" checked/>
+                                                    <span class="icon"></span>
+                                                    <span class="b-title bt16">Нет</span>
+                                                </label>
+                                                <label class="styled-radio">
+                                                    <input type="radio" name="warming" value="50 мм"/>
+                                                    <span class="icon"></span>
+                                                    <span class="b-title bt16">50 мм</span>
+                                                </label>
+                                                <label class="styled-radio">
+                                                    <input type="radio" name="warming" value="100 мм"/>
+                                                    <span class="icon"></span>
+                                                    <span class="b-title bt16">100 мм</span>
+                                                </label>
+                                                <label class="styled-radio">
+                                                    <input type="radio" name="warming" value="150 мм"/>
+                                                    <span class="icon"></span>
+                                                    <span class="b-title bt16">150 мм</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calc-f-item calc-f-item-align-center">
+                                        <div class="calc-f-item-title b-title bt16 semibold">Желаемая, примерная стоимость:</div>
+                                        <div class="calc-f-item-value calc-f-item-value-prices">
+                                            <div class="b-title bt16 color4">от</div>
+                                            <input type="text" name="price" placeholder="30 000" style="width:108px;"/>
+                                            <div class="b-title bt16 color4">до</div>
+                                            <input type="text" name="price" placeholder="120 000" style="width:108px;"/>
+                                            <div class="b-title bt16 color4">рублей</div>
+                                        </div>
+                                    </div>
+                                    <div class="calc-f-item calc-f-item-line"></div>
+                                    <div class="calc-f-item">
+                                        <div class="b-title bt18 semibold">Специалист "СтроГруппМонтаж" подготовит расчет стоимости отделки фасада в трех ценовых категориях Вашего дома и вышлет смету на электронную почту.</div>
+                                    </div>
+                                    <div class="calc-f-item">
+                                        <div class="f-item-33">
+                                            <input type="text" name="name" placeholder="Ваше имя" />
+                                        </div>
+                                        <div class="f-item-33">
+                                            <input type="tel" name="phone" placeholder=" Ваш телефон" />
+                                        </div>
+                                        <div class="f-item-33">
+                                            <input type="email" name="email" placeholder="Электронная почта" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-f-item calc-f-item-submit-end">
+                                    <a class="styled-btn styled-btn-5 styled-btn-size2 styled-btn-without-shadow prev-step-btn">
+                                        <svg class="arrow-left">
+                                            <use xlink:href="#icon-arrow-right"/>
+                                        </svg>
+                                        Назад
+                                    </a>
+                                    <button type="submit" class="styled-btn styled-btn-1 styled-btn-size2 styled-btn-without-shadow submit">Отправить</button>
+                                    <div class="privacy-policy-form b-title bt11">Нажимая на кнопку, <br />вы соглашаетесь c <br /><a href="/privacy-policy/" target="_blank">политикой <br />конфиденциальности</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="steps-controls">
+                        <div class="b-title bt20 color6 no-margin active">Шаг 1</div>
+                        <div class="b-title bt20 color6 no-margin">Шаг 2</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

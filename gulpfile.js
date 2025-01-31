@@ -9,6 +9,7 @@ var gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'),
     autoprefixer = require('gulp-autoprefixer'),
     del = require('del'),
+    gulpCopy = require('gulp-copy'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     cache = require('gulp-cache')
@@ -24,13 +25,22 @@ var config = {
     distPath: 'dist',
     srcPath: 'src',
     themePath: 'wp-theme/'+pkg.name,
+    wpThemePath: '../sgm-dom.ru wp/wp-content/themes/sgm',
     wpClearThemePath: '/Users/eremenko/FREELANCE/!wp-clear-theme!'
 };
 
 var path = {
     src: {
         html: config.srcPath+'/*.html',
+        waCss: config.srcPath+'/less/whatsapp.less',
+        tgCss: config.srcPath+'/less/telegram.less',
         css: config.srcPath+'/less/main.less',
+        messengersJs: [
+            'node_modules/jquery/dist/jquery.min.js',
+            'node_modules/inputmask/dist/min/jquery.inputmask.bundle.min.js',
+            'node_modules/jquery-validation/dist/jquery.validate.min.js',
+            config.srcPath+'/js/messengers-main.js'
+        ],
         js: [
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/owl.carousel/dist/owl.carousel.min.js',
@@ -75,6 +85,7 @@ var path = {
     dist: {
         html: config.distPath,
         css: config.distPath+'/css',
+        wpCss: config.wpThemePath+'/css',
         js: config.distPath+'/js',
         images: config.distPath+'/images',
         svgSprites: config.distPath+'/images',
@@ -111,12 +122,13 @@ gulp.task('html', function () {
 
 //CSS
 gulp.task('less', function () {
-    return gulp.src(path.src.css)
+    return gulp.src([path.src.css, path.src.waCss, path.src.tgCss])
     .pipe(less())
-    .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
+    .pipe(autoprefixer(['last 23 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
     .pipe(cleanCSS())
     .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest(path.dist.css))
+    .pipe(gulpCopy(path.dist.wpCss, {prefix: 2}))
     .pipe(browserSync.reload({
         stream: true
     }));
@@ -131,6 +143,17 @@ gulp.task('js', function () {
     .pipe(browserSync.reload({
         stream: true
     }));
+});
+
+//MESSENGERS JS
+gulp.task('messengers-js', function () {
+    return gulp.src(path.src.messengersJs)
+        .pipe(concat('messengers-main.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest(path.dist.js))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 });
 
 //FONTS
@@ -255,6 +278,7 @@ gulp.task('watch', function() {
     gulp.watch(path.watch.css, gulp.parallel('less'));
     gulp.watch(path.watch.html, gulp.parallel('html'));
     gulp.watch(path.watch.js, gulp.parallel('js'));
+    gulp.watch(path.watch.js, gulp.parallel('messengers-js'));
     gulp.watch(path.watch.fonts, gulp.parallel('fonts'));
     gulp.watch(path.watch.images, gulp.parallel('images'));
     gulp.watch(path.watch.svgSprites, gulp.parallel('svg-sprites'));
@@ -315,6 +339,7 @@ gulp.task("build", gulp.series('clean-build', gulp.parallel(
     'html',
     'less',
     'js',
+    'messengers-js',
     'fonts',
     'images',
     'svg-sprites',

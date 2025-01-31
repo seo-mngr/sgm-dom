@@ -32,6 +32,20 @@
                             <li>
                                 <a href="#">Главная</a>
                             </li>
+                            <li class="menu-item-has-children menu-item-has-children--type-catalog">
+                                <a href="#">Каталог</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Фасадные панели</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Фиброцементный сайдинг</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Металлочерепица</a>
+                                    </li>
+                                </ul>
+                            </li>
                             <li class="menu-item-has-children">
                                 <a href="#">Отделка фасадов</a>
                                 <ul>
@@ -71,13 +85,61 @@
                             <div class="site-contacts-item site-contacts-item-slogan">
                                 <div class="b-title bt16 no-margin">Отделка фасадов <br />и монтаж кровли в СПб и ЛО. <br />Работаем с 2005 года</div>
                             </div>
-                            <div class="site-contacts-item site-contacts-item-address">
-                                <div class="b-title bt16 no-margin">Офис: Санкт-Петербург, <br/>Нарвский проспект 22, офис 202</div>
-                                <div class="b-title bt16 color7 cb-link no-margin open-modal-form" data-modal-type="map-modal" data-lat="59.839825608514" data-lng="30.298997461795" data-icon="images/map-marker-icon.svg" data-icon-width="50" data-icon-height="68" data-map-type="map-modal"><span>Смотреть на карте</span></div>
-                            </div>
+
                             <div class="site-contacts-item site-contacts-item-email">
                                 <div class="b-title bt16 no-margin">E-mail: <br />info@spbsgm.ru</div>
                                 <div class="b-title bt16 color7 cb-link no-margin open-modal-form" data-modal-title="Напишите нам," data-modal-desc="мы ответим на Ваш e-mail в течение 7 минут" data-modal-type="form-type-3" data-modal-form-subject="SGM | Форма: Заказать звонок" data-modal-button-text="Отправить"><span>Написать нам</span></div>
+                            </div>
+                            <div class="site-contacts-item site-contacts-item-address">
+                                <div class="site-contacts-item-address-container">
+                                    <div class="b-title bt16 no-margin">
+                                        <div class="subway-station">
+                                            <div class="subway-station__logo">
+                                                <div class="subway-station__icon">
+                                                    <img src="images/icon-subway-line.svg" alt="">
+                                                </div>
+                                                <div class="subway-station__logo-text">1</div>
+                                            </div>
+                                            <div class="subway-station__text">ст. м. Нарвская</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="site-contacts-item-address-container">
+                                    <div class="b-title bt16 no-margin">
+                                        <div class="subway-station">
+                                            <div class="subway-station__logo subway-station__logo_green">
+                                                <div class="subway-station__icon">
+                                                    <img src="images/icon-subway-line.svg" alt="">
+                                                </div>
+                                                <div class="subway-station__logo-text">3</div>
+                                            </div>
+                                            <div class="subway-station__text">ст. м. Беговая</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <? if ($mapPosition = get_field('contacts_map_position', 'option')) {
+                                    $mapPosition = json_decode($mapPosition); ?>
+                                <div class="b-title bt16 color7 cb-link no-margin open-modal-form" data-modal-type="map-modal" data-lat="<?=$mapPosition->marks[0]->coords[0];?>" data-lng="<?=$mapPosition->marks[0]->coords[1];?>" data-icon="<?=get_field('contacts_map_icon', 'option');?>" data-icon-width="50" data-icon-height="68" data-map-type="map-modal"><span>Смотреть на карте</span></div>
+                            </div>
+                            <div class="site-contacts-item site-contacts-item-messengers">
+                                <div class="site-contacts-messenger">
+                                    <a href="#" class="site-contacts-messenger__line">
+                                        <div class="site-contacts-messenger__icon">
+                                            <img src="images/icon-whatsapp.svg" alt="">
+                                        </div>
+                                        <div class="site-contacts-messenger__text">
+                                            Whatsapp
+                                        </div>
+                                    </a>
+                                    <a href="#" class="site-contacts-messenger__line">
+                                        <div class="site-contacts-messenger__icon">
+                                            <img src="images/icon-telegram.svg" alt="">
+                                        </div>
+                                        <div class="site-contacts-messenger__text">
+                                            Telegram
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                             <div class="site-contacts-item site-contacts-item-phone site-contacts-item-align-right">
                                 <div class="b-title bt30 semibold no-margin telTo"><i>+7 (812)</i> 645-12-05</div>
@@ -97,6 +159,20 @@
                             <ul class="menu">
                                 <li>
                                     <a href="#">Главная</a>
+                                </li>
+                                <li class="menu-item-has-children menu-item-has-children--type-catalog">
+                                    <a href="#">Каталог</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Фасадные панели</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Фиброцементный сайдинг</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Металлочерепица</a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="#">Отделка фасадов</a>

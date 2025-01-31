@@ -87,7 +87,12 @@ $(document).ready(function () {
                             successModal(form);
                             clearForm(form);
 
-                            if (yandexMetrikaId && yandexGoalName) {
+                            //console.log(getCookie('utm_source'));
+                            if (yandexMetrikaId && (getCookie('utm_source') == 'vk' || getCookie('utm_source') == 'vk_ads') ) {
+                                _tmr.push({ type: 'reachGoal', id: 3572947, goal: 'vk_ads'});
+                                window['yaCounter' + yandexMetrikaId].reachGoal('vk_ads');
+                                console.log(getCookie('utm_source'));
+                            } else if (yandexMetrikaId && yandexGoalName) {
                                 window['yaCounter' + yandexMetrikaId].reachGoal(yandexGoalName);
                             }
                         }
